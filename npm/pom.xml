@@ -15,21 +15,30 @@
     <name>NPM Module</name>
 
     <dependencies>
+        <!-- Internal dependencies -->
         <dependency>
             <groupId>org.jboss.pnc.mapou</groupId>
             <artifactId>mapou-common</artifactId>
-            <scope>provided</scope>
+        </dependency>
+
+        <!-- External dependencies -->
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
 
+        <!-- JSON parsing -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>

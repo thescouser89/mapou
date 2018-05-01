@@ -2,6 +2,7 @@ package org.jboss.pnc.mapou.npm.lockfiles;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.jboss.pnc.mapou.common.dependencies.PublicDependency;
 import org.jboss.pnc.mapou.common.dependencies.RedHatDependency;
 import org.jboss.pnc.mapou.common.lockfiles.ILockfile;
@@ -16,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+@Slf4j
 public class NpmLockfile implements ILockfile {
 
     private PackageLock packageLock;
@@ -26,7 +28,7 @@ public class NpmLockfile implements ILockfile {
 
         packageLock = mapper.readValue(new File(filename), PackageLock.class);
 
-        System.out.println(packageLock);
+        log.info(packageLock.toString());
     }
 
     public Set<PublicDependency> getAllDependencies() {
@@ -88,7 +90,7 @@ public class NpmLockfile implements ILockfile {
 
         dependencies.sort(Comparator.comparing(PublicDependency::getName));
         for (PublicDependency dependency : dependencies) {
-            System.out.println(dependency);
+            log.info(dependency.toString());
         }
     }
 }
