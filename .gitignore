@@ -1,0 +1,7 @@
+# Ignore maven's target folder
+target
+
+
+# Ignore Idea related metadata files
+*.iml
+.idea
