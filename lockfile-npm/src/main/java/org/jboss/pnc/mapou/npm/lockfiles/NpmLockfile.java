@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.jboss.pnc.mapou.common.dependencies.PublicDependency;
-import org.jboss.pnc.mapou.common.dependencies.RedHatDependency;
+import org.jboss.pnc.mapou.common.dependencies.InternalDependency;
 import org.jboss.pnc.mapou.common.lockfiles.ILockfile;
 import org.jboss.pnc.mapou.npm.dto.NpmDependency;
 import org.jboss.pnc.mapou.npm.dto.PackageLock;
@@ -51,7 +51,7 @@ public class NpmLockfile implements ILockfile {
         return publicDependencies;
     }
 
-    public void scanAndReplaceDependency(Map<PublicDependency, RedHatDependency> mappedDependency) {
+    public void scanAndReplaceDependency(Map<PublicDependency, InternalDependency> mappedDependency) {
 
     }
 

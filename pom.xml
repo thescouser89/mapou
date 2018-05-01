@@ -35,8 +35,8 @@
     <modules>
         <module>cli</module>
         <module>common</module>
-        <module>da-client</module>
-        <module>npm</module>
+        <module>translator-da-client</module>
+        <module>lockfile-npm</module>
     </modules>
 
     <dependencyManagement>
@@ -54,12 +54,12 @@
             </dependency>
             <dependency>
                 <groupId>org.jboss.pnc.mapou</groupId>
-                <artifactId>mapou-da-client</artifactId>
+                <artifactId>mapou-translator-da-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jboss.pnc.mapou</groupId>
-                <artifactId>mapou-npm</artifactId>
+                <artifactId>mapou-lockfile-npm</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -88,8 +88,7 @@
             </dependency>
 
             <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
+                <groupId>org.projectlombok</groupId> <artifactId>lombok</artifactId>
                 <version>1.16.20</version>
                 <scope>provided</scope>
             </dependency>

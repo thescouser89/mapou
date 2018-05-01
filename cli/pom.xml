@@ -21,11 +21,11 @@
         </dependency>
         <dependency>
             <groupId>org.jboss.pnc.mapou</groupId>
-            <artifactId>mapou-da-client</artifactId>
+            <artifactId>mapou-translator-da-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.jboss.pnc.mapou</groupId>
-            <artifactId>mapou-npm</artifactId>
+            <artifactId>mapou-lockfile-npm</artifactId>
         </dependency>
 
         <!-- external dependencies -->
